@@ -1,0 +1,81 @@
+package main
+
+// func plus(a int, b int) int {
+// 	return a + b
+// }
+
+// // a, b 가 같으면 int 생략 가능
+// func plus(a, b int) int {
+// 	return a + b
+// }
+
+// // return 여러개 가질수 있음.
+// func plus(a, b int, name string) (int, string) {
+// 	return a + b, name
+// }
+
+//iterate (반복)
+// func plus(a ...int) int { // 여러개의 인자를 넘겨받을때 arr로 자동으로 저장.
+// 	total := 0
+// 	for _, item := range a { // _로 index 안쓰는걸 명시
+// 		total += item
+// 	}
+// 	return total
+// }
+
+func main() {
+	// 선언
+	// var name string = "nico1" // 함수 밖에서도 이렇게 선언 가능.
+	// namee := "nico2"          // short cut 하지만 함수 밖에서는 사용 불가.
+	// const nameee string = "nico3" // constant
+
+	//plus에 return이 여러개일때.
+	// result, name := plus(2, 2, "nico")
+	// fmt.Println(result, name)
+
+	//iterate (반복)
+	// result := plus(2, 3, 4, 5, 6, 7, 8, 9, 10)
+	// fmt.Println(result)
+
+	//iterate string
+	// name := "Nicolass!!! Is my name"
+	// for index, letter := range name {
+	// 	fmt.Println(index, letter)
+	// }
+
+	//format
+	// x := 4059374792
+	// fmt.Printf("%d\n", x)
+	// fmt.Printf("%b\n", x)
+	// fmt.Printf("%o\n", x)
+	// fmt.Printf("%x\n", x)
+
+	//format sprintf
+	// x := 4059374792
+	// xAsBinaty := fmt.Sprintf("%b\n", x) // format된걸 return
+	// fmt.Println(x, xAsBinaty)
+
+	// array
+	// foods := [3]string{"potato", "pizza", "pasta"} // name := [size]type{data}
+	// for _, food := range foods {                   // range base
+	// 	fmt.Println(food)
+	// }
+	// for i := 0; i < len(foods); i++ { // loop
+	// 	fmt.Println(foods[i])
+	// }
+
+	// slice
+	// foods := []string{"potato", "pizza", "pasta"} // name := [생략]type{data}
+	// fmt.Printf("%v\n", foods)
+	// foods = append(foods, "tomato") // append 함수의 Return으로 업데이트 해주는거
+	// fmt.Printf("%v\n", foods)
+	// fmt.Println(len(foods))
+
+	// pointer c언어랑 같음
+	// a := 2
+	//b := a // value COPY 주소 아님
+	// b := &a // b = pointer
+	// a = 50
+	// fmt.Println(b, &a) // 결과 같음
+	// fmt.Println(*b)
+}
