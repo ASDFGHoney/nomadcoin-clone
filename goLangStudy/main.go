@@ -2,17 +2,30 @@ package main
 
 import "fmt"
 
-const var1 string = "constant word" // 변경이 불가능한 constant
+func plus(a, b int, name string) (int, string) {
+	return a + b, name
+}
 
-var name1 string = "word"
-
-// name := "worr" // error. 함수 밖에서는 shortcut 사용 불가
+func plusAll(a ...int) int {
+	total := 0
+	for index, item := range a {
+		total += item
+		total += index
+	}
+	return total
+}
+func plusItem(a ...int) int {
+	total := 0
+	for _, item := range a { // _로 인덱스 무시
+		total += item
+	}
+	return total
+}
 
 func main() {
-	// var name string = "nico"
-	name := "nico" // 위 코드와 같은 기능
-	// name = 12 // 선언에서 타입이 정해지기 때문에 다른 타입의 인수를 넣을수는 없다.
-	name = "12" // 가능
-
-	fmt.Println(name)
+	result, name := plus(2, 2, "nico")
+	result2 := plusAll(2, 3, 4, 5, 6, 7, 8, 9, 10)
+	result3 := plusItem(2, 3, 4, 5, 6, 7, 8, 9, 10)
+	fmt.Println(result, name)
+	fmt.Println(result2, result3)
 }
