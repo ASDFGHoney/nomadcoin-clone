@@ -1,6 +1,22 @@
 package main
 
-import "fmt"
+func main() {
+
+}
+
+/* about_fmt
+func main(){
+	x := 333
+	fmt.Printf("%b/n", x) // binary 2진법
+	fmt.Printf("%o/n", x) // 8진법
+	fmt.Printf("%x/n", x) // 16진법
+	fmt.Printf("%U/n", x) // unicode
+
+	xAsBinary := fmt.Sprintf("%b\n", x)
+	fmt.Println(x, xAsBinary)
+}
+*/
+/* about_function
 
 func plus(a, b int, name string) (int, string) {
 	return a + b, name
@@ -29,3 +45,4 @@ func main() {
 	fmt.Println(result, name)
 	fmt.Println(result2, result3)
 }
+*/
