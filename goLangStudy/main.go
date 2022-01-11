@@ -3,6 +3,15 @@ package main
 import "fmt"
 
 func main() {
+	a := 2
+	b := &a
+	a = 50
+
+	fmt.Println(*b) // a의 주소를 저장하고 있는 포인터이기 때문에 a에 저장되어있는 value를 출력
+}
+
+/* Slices and Arrays ---------------------------------------------------------------
+func main() {
 	arr := [3]int{1, 2, 3}
 	fmt.Printf("%v\n", arr)
 
@@ -15,8 +24,9 @@ func main() {
 	fmt.Printf("%v\n", foodsNew)
 	fmt.Println(len(foods))
 }
+*/
 
-/* about_fmt
+/* about_fmt ----------------------------
 func main(){
 	x := 333
 	fmt.Printf("%b/n", x) // binary 2진법
@@ -28,8 +38,8 @@ func main(){
 	fmt.Println(x, xAsBinary)
 }
 */
-/* about_function
 
+/* about_function -------------------------------
 func plus(a, b int, name string) (int, string) {
 	return a + b, name
 }
