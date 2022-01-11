@@ -2,6 +2,24 @@ package main
 
 import "fmt"
 
+type person struct {
+	name string
+	age  int
+}
+
+func (p person) sayHello() {
+	fmt.Printf("Hello My name is %s and I'm %d\n", p.name, p.age)
+}
+
+func main() {
+	// 두가지 방법
+	nico := person{"nico", 12} // 선언했던 순서와 같아야 한다.
+	chi := person{age: 25, name: "chi"}
+	nico.sayHello()
+	chi.sayHello()
+}
+
+/* Pointer --------------------------------------------------------------------
 func main() {
 	a := 2
 	b := &a
@@ -9,6 +27,7 @@ func main() {
 
 	fmt.Println(*b) // a의 주소를 저장하고 있는 포인터이기 때문에 a에 저장되어있는 value를 출력
 }
+*/
 
 /* Slices and Arrays ---------------------------------------------------------------
 func main() {
