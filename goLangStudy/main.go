@@ -1,7 +1,18 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	arr := [3]int{1, 2, 3}
+	fmt.Printf("%v\n", arr)
+
+	foods := []string{"potato", "pizza", "pasta"}
+	fmt.Printf("%v\n", foods)
+
+	foodsNew := append(foods, "tomato") // food에 "tomato" 추가한 slices 복사본
+	foods = append(foods, "tomato")     // 기존 slices에 "tomato" 추가
+	fmt.Printf("%v\n", foods)
+	fmt.Printf("%v\n", foodsNew)
 }
 
 /* about_fmt
