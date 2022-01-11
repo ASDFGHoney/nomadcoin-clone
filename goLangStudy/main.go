@@ -13,6 +13,7 @@ func main() {
 	foods = append(foods, "tomato")     // 기존 slices에 "tomato" 추가
 	fmt.Printf("%v\n", foods)
 	fmt.Printf("%v\n", foodsNew)
+	fmt.Println(len(foods))
 }
 
 /* about_fmt
