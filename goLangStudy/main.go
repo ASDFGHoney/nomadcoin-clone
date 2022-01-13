@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
+	"github.com/Chi-Honey/nomadcoin-clone/goLangStudy/person"
+)
+
+func main() {
+	nico := person.Person{}
+	nico.SetDetail("nico", 12)
+	fmt.Println("Main's nico : ", nico)
+	fmt.Println(nico.Name())
+}
+
+/* Struct -------------------------------------------------------------
 type person struct {
 	name string
 	age  int
@@ -18,6 +30,7 @@ func main() {
 	nico.sayHello()
 	chi.sayHello()
 }
+*/
 
 /* Pointer --------------------------------------------------------------------
 func main() {
